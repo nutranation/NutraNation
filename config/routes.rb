@@ -1,4 +1,4 @@
-SampleApp::Application.routes.draw do
+NutraNation::Application.routes.draw do
 
   resources :users do
     member do
