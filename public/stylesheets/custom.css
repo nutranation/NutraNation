@@ -137,6 +137,7 @@ td.sidebar {
   background: #ffc;
 }
 
+
 .profile img.gravatar {
   border: 1px solid #999;
   margin-bottom: -15px;
@@ -144,6 +145,11 @@ td.sidebar {
 
 div.field, div.actions {
   margin-bottom: 10px;
+}
+textarea{
+	width: 160px;
+	height: 65px;
+	padding: 5px;
 }
 
 /*  Error messages */
