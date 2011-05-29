@@ -146,7 +146,7 @@ td.sidebar {
 div.field, div.actions {
   margin-bottom: 10px;
 }
-textarea{
+textarea.description{
 	width: 160px;
 	height: 65px;
 	padding: 5px;
