@@ -3,7 +3,7 @@ namespace :db do
   task :populate => :environment do
     Rake::Task['db:reset'].invoke
     make_users
-    make_microposts
+    make_posts
     make_relationships
   end
 end
@@ -25,10 +25,10 @@ def make_users
   end
 end
 
-def make_microposts
+def make_posts
   User.all(:limit => 6).each do |user|
     50.times do
-      user.microposts.create!(:content => Faker::Lorem.sentence(5))
+      user.posts.create!(:content => Faker::Lorem.sentence(5))
     end
   end
 end

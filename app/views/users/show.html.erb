@@ -6,11 +6,11 @@
         <%= @user.name %>
       </h1>
       <%= render 'follow_form' if signed_in? %>
-      <% if @user.microposts.any? %>
-        <table class="microposts" summary="User microposts">
-          <%= render @microposts %>
+      <% if @user.posts.any? %>
+        <table class="posts" summary="User posts">
+          <%= render @posts %>
         </table>
-        <%= will_paginate @microposts %>
+        <%= will_paginate @posts %>
       <% end %>
     </td>
 	<td>
@@ -18,7 +18,7 @@
     <td class="sidebar round">
       <strong>Name:</strong> <%= @user.name %><br />
       <strong>Description:</strong>  <%= @user.description %><br />
-      <strong>Posts:</strong> <%= @user.microposts.count %>
+      <strong>Posts:</strong> <%= @user.posts.count %>
       <%= render 'shared/stats' %>
     </td>
   </tr>

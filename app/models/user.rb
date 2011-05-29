@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   attr_accessor   :password
   attr_accessible :name, :email, :description, :password, :password_confirmation
   
-  has_many :microposts,    :dependent => :destroy
+  has_many :posts,    :dependent => :destroy
   has_many :relationships, :dependent => :destroy,
                            :foreign_key => "follower_id"
   has_many :reverse_relationships, :dependent => :destroy,
@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
   end
   
   def feed
-    Micropost.from_users_followed_by(self)
+    Post.from_users_followed_by(self)
   end
   
   def following?(followed)
