@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :description, :password, :password_confirmation
   
   has_many :posts,    :dependent => :destroy
+  has_many :comments,    :dependent => :destroy
   has_many :relationships, :dependent => :destroy,
                            :foreign_key => "follower_id"
   has_many :reverse_relationships, :dependent => :destroy,
@@ -26,6 +27,7 @@ class User < ActiveRecord::Base
   has_many :following, :through => :relationships, :source => :followed
   has_many :followers, :through => :reverse_relationships,
                        :source  => :follower
+  
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   

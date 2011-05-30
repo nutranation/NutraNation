@@ -151,6 +151,11 @@ textarea.description{
 	height: 65px;
 	padding: 5px;
 }
+textarea.comment{
+	width: 275px;
+	height: 65px;
+	padding: 5px;
+}
 
 /*  Error messages */
 
@@ -235,8 +240,38 @@ table.posts tr td.post span.timestamp {
   color: #666;
 }
 
+
+
 div.user_info img {
   padding-right: 0.1em;
+}
+
+div.comments{
+ margin-left: 2em;
+}
+
+table.comments tr {
+  height: 70px;
+  margin-right: 2em;
+}
+
+table.comments tr td.gravatar {
+  padding-right: .1em;
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+
+table.comments tr td.comments {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+table.comments tr td.comments span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
 }
 
 div.user_info a {
@@ -258,4 +293,10 @@ form.new_post {
 form.new_post textarea {
   height: 4em;
   margin-bottom: 0;
+}
+
+
+/* Post page */
+div.post{
+  color: #5A8DA0;
 }

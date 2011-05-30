@@ -11,6 +11,13 @@ class PostsController < ApplicationController
       render 'pages/home'
     end
   end
+  
+  def show
+    @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comment.post_id = @post.id
+    @c_comment = Comment.where("post_id = ?", @post.id)
+  end
 
   def destroy
     @post.destroy
